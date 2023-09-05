@@ -13,3 +13,6 @@ Use it!
 - None of your information is used or stored
 
 ### Enjoy!
+
+#### P.S. - If you want to learn how this works and how it's free?
+- Read the documentation steps in the [docs](https://github.com/robert-z-lehr/QR-Code-Generator/tree/main/docs) folder.

@@ -1,4 +1,8 @@
 function generateQRCode() {
+    if (window.innerWidth <= 600) {
+        document.body.style.fontSize = "18px";
+      }      
+    
     // Clear previous QR Code
     document.getElementById("qrcode").innerHTML = "";
   
@@ -8,8 +12,8 @@ function generateQRCode() {
     // Generate new QR Code
     new QRCode(document.getElementById("qrcode"), {
       text: url,
-      width: 128,
-      height: 128,
+      width: 512,
+      height: 512,
       colorDark: "#000000",
       colorLight: "#ffffff",
       correctLevel: QRCode.CorrectLevel.L
