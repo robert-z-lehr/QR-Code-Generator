@@ -9,8 +9,8 @@ function generateQRCode() {
   // Generate new QR Code
   new QRCode(document.getElementById("qrcode"), {
     text: url,
-    width: 256,
-    height: 256,
+    width: 200,
+    height: 200,
     colorDark: "#000000",
     colorLight: "#ffffff",
     correctLevel: QRCode.CorrectLevel.L
