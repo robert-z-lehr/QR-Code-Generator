@@ -1,5 +1,5 @@
 # QR Code Generator
-A simple QR Code generator service hosted here,  on GitHub Pages.
+A simple QR Code generator service hosted [**HERE**](https://robert-z-lehr.github.io/QR-Code-Generator/), on GitHub Pages.
 
 ## How to Use
 1. Enter a URL in the input field.
