@@ -1,41 +1,36 @@
-/**
- * Function to generate QR Code
- * Clears existing QR Code, then creates a new one based on the user's input.
- */
+// script.js
+
+// Function to generate a QR code
 function generateQRCode() {
-  // Clear any existing QR Code from the container
-  document.getElementById("qrWrapper").innerHTML = "";
+  // Get the QR wrapper element and clear its content
   const qrWrapper = document.getElementById("qrWrapper");
   qrWrapper.innerHTML = "";
 
-  // Retrieve the URL entered by the user
+  // Retrieve the URL from the input field
   const url = document.getElementById("url-input").value;
 
-  // Generate a new QR Code using the library
+  // Generate the QR code using the qrcode.js library
   new QRCode(qrWrapper, {
-    text: url,
-    width: 256,
-    height: 256,
-    colorDark: "#000000",
-    colorLight: "#ffffff",
-    correctLevel: QRCode.CorrectLevel.L
+    text: url,          // Text to encode
+    width: 256,         // Width of the QR code
+    height: 256,        // Height of the QR code
+    colorDark: "#000000",  // Dark color
+    colorLight: "#ffffff", // Light color
+    correctLevel: QRCode.CorrectLevel.L  // Error correction level
   });
 }
 
-/**
- * Adds an event listener to the 'Download QR Code' button.
- * Converts the QR code canvas to a PNG and triggers the download.
- */
+// Event listener for the 'Download QR Code' button
 document.getElementById("downloadQR").addEventListener("click", function() {
-  // Retrieve the canvas element containing the QR Code
-  const canvas = document.querySelector("#qrcode canvas");
+  // Retrieve the canvas element containing the QR code
+  const canvas = document.querySelector("#qrWrapper canvas");
 
   // Convert the canvas to a PNG data URL
   const imgURL = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
 
   // Create an anchor element to trigger the download
   const link = document.createElement("a");
-  link.download = 'QRCode.png';
-  link.href = imgURL;
-  link.click();
+  link.download = 'QRCode.png';  // File name for downloaded image
+  link.href = imgURL;            // Image data as a URL
+  link.click();                  // Trigger the download
 });
