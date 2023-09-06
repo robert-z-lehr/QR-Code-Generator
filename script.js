@@ -1,34 +1,38 @@
-// Function to generate QR Code
+/**
+ * Function to generate QR Code
+ * Clears existing QR Code, then creates a new one based on the user's input.
+ */
 function generateQRCode() {
-  // Clear any existing QR Code from the container
+  // Clear the previous QR Code
   document.getElementById("qrcode").innerHTML = "";
 
   // Retrieve the URL entered by the user
   const url = document.getElementById("url-input").value;
 
-  // Generate a new QR Code using the library
+  // Generate a new QR Code using the qrcode.min.js library
   new QRCode(document.getElementById("qrcode"), {
-    text: url,             // Text to be encoded
-    width: 256,            // Width of the QR Code
-    height: 256,           // Height of the QR Code
-    colorDark: "#000000",  // Dark color for the QR Code
-    colorLight: "#ffffff", // Light color for the QR Code
-    correctLevel: QRCode.CorrectLevel.L // Error correction level
+    text: url,
+    width: 256,
+    height: 256,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.L
   });
 }
 
-// Event listener for the 'Download QR Code' button
+/**
+ * Adds an event listener to the 'Download QR Code' button.
+ * Converts the QR code canvas to a PNG and triggers the download.
+ */
 document.getElementById("downloadQR").addEventListener("click", function() {
-  // Retrieve the canvas element that holds the QR Code
+  // Retrieve the canvas element containing the QR Code
   const canvas = document.querySelector("#qrcode canvas");
 
-  // Convert the canvas to a downloadable image format (PNG)
+  // Convert the canvas to a PNG data URL
   const imgURL = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
 
-  // Create a download link element
+  // Create an anchor element to trigger the download
   const link = document.createElement("a");
-
-  // Set the link attributes and trigger the download
   link.download = 'QRCode.png';
   link.href = imgURL;
   link.click();

@@ -51,6 +51,9 @@ button {
 
 #qrcode canvas {
   margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 button:hover {
