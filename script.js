@@ -17,6 +17,9 @@ window.onload = function () {
     });
   }
 
+  // Event listener for the 'Generate QR Code' button
+  document.getElementById("generate-button").addEventListener("click", generateQRCode);
+
   // Event listener for the 'Download QR Code' button
   document.getElementById("downloadQR").addEventListener("click", function() {
     const canvas = document.querySelector("#qrWrapper canvas");
