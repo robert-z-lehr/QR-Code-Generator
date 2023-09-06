@@ -42,8 +42,8 @@ input[type="text"] {
   margin: 0 auto;
 }
 
-/* Keep "Generate QR Code" button blue */
-button {
+/* Generate QR Code */
+button#generateQR {
   font-size: 1em;
   padding: 0.5em 1em;
   background-color: #007bff; /* Blue color */
@@ -55,10 +55,29 @@ button {
   margin: 0 auto; /* Center horizontally */
   margin-top: 25px;
   margin-bottom: 25px; /* Add a 25px margin at the bottom */
+  transition: background-color 0.3s ease; /* Smooth transition for background-color */
 }
 
-/* Change only the "Download QR Code" button to green when hovered */
-button:hover {
-  background-color: #45a049; /* Darker shade of green */
+button#generateQR:hover {
+  background-color: #0056b3; /* Darker shade of blue when hovered */
 }
 
+/* Download QR Code */
+button#downloadQR {
+  font-size: 1em;
+  padding: 0.5em 1em;
+  background-color: #4CAF50; /* Green color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto; /* Center horizontally */
+  margin-top: 25px;
+  margin-bottom: 25px; /* Add a 25px margin at the bottom */
+  transition: background-color 0.3s ease; /* Smooth transition for background-color */
+}
+
+button#downloadQR:hover {
+  background-color: #45a049; /* Darker shade of green when hovered */
+}
