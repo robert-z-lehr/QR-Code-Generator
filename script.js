@@ -3,14 +3,16 @@
  * Clears existing QR Code, then creates a new one based on the user's input.
  */
 function generateQRCode() {
-  // Clear the previous QR Code
+  // Clear any existing QR Code from the container
   document.getElementById("qrcode").innerHTML = "";
+  const qrWrapper = document.getElementById("qrWrapper");
+  qrWrapper.innerHTML = "";
 
   // Retrieve the URL entered by the user
   const url = document.getElementById("url-input").value;
 
-  // Generate a new QR Code using the qrcode.min.js library
-  new QRCode(document.getElementById("qrcode"), {
+  // Generate a new QR Code using the library
+  new QRCode(qrWrapper, {
     text: url,
     width: 256,
     height: 256,

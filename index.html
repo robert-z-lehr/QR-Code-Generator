@@ -11,8 +11,11 @@
     <input type="text" id="url-input" placeholder="Enter URL">
     <button onclick="generateQRCode()">Generate QR Code</button>
     <div id="qrcode"></div>
+    <div id="qrWrapper">
+      <!-- The canvas element will be inserted here by the QR code library -->
+    </div>
     <button id="downloadQR">Download QR Code</button>
-  </div>
+  </div>  
   <script src="script.js"></script>
 </body>
 </html>
