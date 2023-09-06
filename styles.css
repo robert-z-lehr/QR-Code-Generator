@@ -25,7 +25,7 @@ input[type="text"] {
   font-size: 1em;
   padding: 0.5em;
   width: 80%;
-  margin-bottom: 1em;
+  margin-bottom: 25px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -51,9 +51,12 @@ button:hover {
 
 #qrWrapper {
   margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #qrWrapper canvas {
-  margin: auto;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
