@@ -49,16 +49,11 @@ button:hover {
   background-color: #0056b3;
 }
 
+#qrWrapper {
+  margin-top: 25px;
+}
+
 #qrWrapper canvas {
   margin: auto;
   display: block;
-}
-
-#qrCenterWrapper {
-  display: flex;
-  justify-content: center;
-}
-
-#qrWrapper {
-  /* Leave this empty or add any additional styles you want for #qrWrapper */
 }
