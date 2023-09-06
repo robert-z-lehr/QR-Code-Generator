@@ -42,10 +42,11 @@ input[type="text"] {
   margin: 0 auto;
 }
 
+/* Keep "Generate QR Code" button blue */
 button {
   font-size: 1em;
   padding: 0.5em 1em;
-  background-color: #4CAF50; /* Pleasant shade of green */
+  background-color: #007bff; /* Blue color */
   color: white;
   border: none;
   border-radius: 4px;
@@ -56,6 +57,8 @@ button {
   margin-bottom: 25px; /* Add a 25px margin at the bottom */
 }
 
+/* Change only the "Download QR Code" button to green when hovered */
 button:hover {
-  background-color: #45a049; /* Darker shade when hovered */
+  background-color: #45a049; /* Darker shade of green */
 }
+
