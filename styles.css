@@ -10,6 +10,7 @@ body {
 
 .container {
   text-align: center;
+  margin-top: 100px;
   background-color: #fff;
   padding: 2em;
   border-radius: 8px;
@@ -17,9 +18,7 @@ body {
 }
 
 h1 {
-  font-size: 2em;
-  margin-bottom: 1em;
-  text-align: center;
+  font-size: 36px;
 }
 
 input[type="text"] {
@@ -47,6 +46,10 @@ button {
 }
 
 #qrcode {
+  margin-top: 25px;
+}
+
+#qrcode canvas {
   margin-top: 25px;
 }
 
