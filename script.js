@@ -4,7 +4,7 @@
  */
 function generateQRCode() {
   // Clear any existing QR Code from the container
-  document.getElementById("qrcode").innerHTML = "";
+  document.getElementById("qrWrapper").innerHTML = "";
   const qrWrapper = document.getElementById("qrWrapper");
   qrWrapper.innerHTML = "";
 
