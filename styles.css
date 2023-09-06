@@ -48,7 +48,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-#qrWrapper {
+/* #qrWrapper {
   margin-top: 25px;
 }
 
@@ -56,4 +56,15 @@ button:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+} */
+
+#qrWrapper {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#qrWrapper canvas {
+  margin: 0 auto;
+  display: block;
 }
