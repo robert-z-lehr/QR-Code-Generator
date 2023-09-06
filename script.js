@@ -1,12 +1,28 @@
+// // Function to generate QR Code
+// function generateQRCode() {
+//   const qrWrapper = document.getElementById("qrWrapper");
+//   console.log("generateQRCode called"); // Add this line for debugging
+//   qrWrapper.innerHTML = "";
+
+//   const url = document.getElementById("url-input").value;
+
+//   new QRCode(qrWrapper, {
+//     text: url,
+//     width: 256,
+//     height: 256,
+//     colorDark: "#000000",
+//     colorLight: "#ffffff",
+//     correctLevel: QRCode.CorrectLevel.L
+//   });
+// }
+
 // Function to generate QR Code
 function generateQRCode() {
   const qrWrapper = document.getElementById("qrWrapper");
-  console.log("generateQRCode called"); // Add this line for debugging
-  qrWrapper.innerHTML = "";
+  qrWrapper.innerHTML = ""; // Clear existing content
 
   const url = document.getElementById("url-input").value;
-
-  new QRCode(qrWrapper, {
+  const qrCode = new QRCode(qrWrapper, {
     text: url,
     width: 256,
     height: 256,
@@ -14,7 +30,11 @@ function generateQRCode() {
     colorLight: "#ffffff",
     correctLevel: QRCode.CorrectLevel.L
   });
+
+  // Append the generated QR code canvas to qrWrapper
+  qrWrapper.appendChild(qrCode._el);
 }
+
 
 // Event listener for the 'Download QR Code' button
 document.getElementById("downloadQR").addEventListener("click", function() {

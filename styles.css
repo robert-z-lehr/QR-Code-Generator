@@ -55,7 +55,7 @@ button#generateQR {
   margin: 0 auto; /* Center horizontally */
   margin-top: 25px;
   margin-bottom: 25px; /* Add a 25px margin at the bottom */
-  transition: background-color 0.3s ease; /* Smooth transition for background-color */
+  /* transition: background-color 0.3s ease; /* Smooth transition for background-color */
 }
 
 button#generateQR:hover {
@@ -75,7 +75,7 @@ button#downloadQR {
   margin: 0 auto; /* Center horizontally */
   margin-top: 25px;
   margin-bottom: 25px; /* Add a 25px margin at the bottom */
-  transition: background-color 0.3s ease; /* Smooth transition for background-color */
+  /* transition: background-color 0.3s ease; /* Smooth transition for background-color */
 }
 
 button#downloadQR:hover {
