@@ -1,21 +1,3 @@
-// // Function to generate QR Code
-// function generateQRCode() {
-//   const qrWrapper = document.getElementById("qrWrapper");
-//   console.log("generateQRCode called"); // Add this line for debugging
-//   qrWrapper.innerHTML = "";
-
-//   const url = document.getElementById("url-input").value;
-
-//   new QRCode(qrWrapper, {
-//     text: url,
-//     width: 256,
-//     height: 256,
-//     colorDark: "#000000",
-//     colorLight: "#ffffff",
-//     correctLevel: QRCode.CorrectLevel.L
-//   });
-// }
-
 // Function to generate QR Code
 function generateQRCode() {
   const qrWrapper = document.getElementById("qrWrapper");
